@@ -16,13 +16,30 @@ import Store from './Store/configureStore'
 const SearchStackNavigator = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
-function MyStack() {
+function MyStackSearch() {
   return (
     <SearchStackNavigator.Navigator>
       <SearchStackNavigator.Screen
       name='Search'
       component={Search}
       options={{title:'Rechercher'}}
+      />
+      <SearchStackNavigator.Screen
+      name='FilmDetail'
+      component={FilmDetail}
+      options={{title:'Détails du Film'}}
+      />
+    </SearchStackNavigator.Navigator>
+  )
+}
+
+function MyStackFavorite() {
+  return (
+    <SearchStackNavigator.Navigator>
+      <SearchStackNavigator.Screen
+      name='Favorites'
+      component={Favorites}
+      options={{title:'Favoris'}}
       />
       <SearchStackNavigator.Screen
       name='FilmDetail'
@@ -57,12 +74,12 @@ function MyTab() {
         }}>
           <Tab.Screen
           name="StackSearch"
-          component={MyStack}
+          component={MyStackSearch}
           />
           <Tab.Screen
-          name="Favorites"
-          component={Favorites}
-          options={{title:'Favoris'}}/>
+          name="StackFavorite"
+          component={MyStackFavorite}
+          />
     </Tab.Navigator>
   )
 }
