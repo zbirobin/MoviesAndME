@@ -1,1 +1,1 @@
-# Project of the MOOC "Développez une application React Nativ".
+# Project of the OpenClassroom MOOC "Développez une application React Nativ".
