@@ -1,12 +1,16 @@
 import 'react-native-gesture-handler';
 import React from 'react'
 import { Image, StyleSheet } from 'react-native';
+
 import Search from './Components/Search'
 import Favorites from './Components/Favorites'
 import FilmDetail from './Components/FilmDetail'
+import Test from './Components/Test'
+
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import { Provider } from 'react-redux'
@@ -79,6 +83,10 @@ function MyTab() {
           <Tab.Screen
           name="StackFavorite"
           component={MyStackFavorite}
+          />
+          <Tab.Screen
+          name="Test"
+          component={Test}
           />
     </Tab.Navigator>
   )
