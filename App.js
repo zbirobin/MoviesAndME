@@ -5,7 +5,6 @@ import { Image, StyleSheet } from 'react-native';
 import Search from './Components/Search'
 import Favorites from './Components/Favorites'
 import FilmDetail from './Components/FilmDetail'
-import Test from './Components/Test'
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -83,10 +82,6 @@ function MyTab() {
           <Tab.Screen
           name="StackFavorite"
           component={MyStackFavorite}
-          />
-          <Tab.Screen
-          name="Test"
-          component={Test}
           />
     </Tab.Navigator>
   )
