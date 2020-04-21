@@ -1,5 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
+import Avatar from './Avatar.js'
 import FilmList from './FilmList.js'
 import { connect } from 'react-redux'
 
@@ -8,6 +9,9 @@ class Favorites extends React.Component {
   render() {
     return (
       <View style={styles.main_container}>
+        <View style={styles.avatar_container}>
+          <Avatar/>
+        </View>
         <FilmList
           films={this.props.favoritesFilm}
           navigation={this.props.navigation}
@@ -21,12 +25,15 @@ class Favorites extends React.Component {
 const styles = StyleSheet.create({
   main_container: {
     flex: 1,
+  },
+  avatar_container: {
+    alignItems: 'center'
   }
 })
 
 const mapStateToProps = state => {
   return {
-    favoritesFilm: state.favoritesFilm
+    favoritesFilm: state.toggleFavorite.favoritesFilm
   }
 }
 
